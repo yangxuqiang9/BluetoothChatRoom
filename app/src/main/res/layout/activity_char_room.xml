@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a328789.bluetoothcharroom.CharRoomActivity">
+    <TextView
+        android:id="@+id/friend_name"
+        android:gravity="center"
+        android:text="好友"
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:layout_height="0dp" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:id="@+id/char_content"
+        android:background="@android:color/darker_gray"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+    <EditText
+        android:id="@+id/centent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+    <Button
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_weight="0.1"
+        android:text="发送"
+        android:layout_height="0dp" />
+
+</LinearLayout>
