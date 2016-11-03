@@ -4,6 +4,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.nfc.Tag;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -26,7 +27,7 @@ public class DeviceItemAdapter extends RecyclerView.Adapter<DeviceItemAdapter.De
 
     @Override
     public DeviceHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View inflate = View.inflate(context, R.layout.device_name_item, null);
+        View inflate= LayoutInflater.from(context).inflate(R.layout.device_name_item, parent,false);
         inflate.setOnClickListener(this);
         return new DeviceHolder(inflate);
     }

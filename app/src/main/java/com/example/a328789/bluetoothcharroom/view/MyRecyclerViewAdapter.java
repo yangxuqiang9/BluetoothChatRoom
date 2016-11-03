@@ -27,7 +27,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     @Override
     public MyHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(context).inflate(R.layout.main_bluetoothdevice_item, null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.main_bluetoothdevice_item, parent,false);
         inflate.setOnClickListener(this);
         return new MyHolder(inflate);
     }

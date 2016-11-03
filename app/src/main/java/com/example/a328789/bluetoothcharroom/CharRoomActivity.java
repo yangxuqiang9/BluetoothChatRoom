@@ -97,6 +97,7 @@ public class CharRoomActivity extends AppCompatActivity implements View.OnClickL
     protected void onDestroy() {
         super.onDestroy();
 //        timer.cancel();
+        blueToothUtils2.closeIO();
     }
 
     public void refreshContext(String readDate){

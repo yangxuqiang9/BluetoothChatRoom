@@ -2,6 +2,7 @@ package com.example.a328789.bluetoothcharroom.view;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -27,7 +28,7 @@ public class ChatRoomAdapter extends RecyclerView.Adapter<ChatRoomAdapter.ChatRo
 
     @Override
     public ChatRoomHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ChatRoomHolder(View.inflate(context, R.layout.chat_room_item,null));
+        return new ChatRoomHolder(LayoutInflater.from(context).inflate( R.layout.chat_room_item,parent,false));
     }
 
     @Override
