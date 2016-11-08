@@ -146,6 +146,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         blueToothUtils.createBound(b);
     }
     public void unuser(){
-
+        int a=0;
     }
 }
