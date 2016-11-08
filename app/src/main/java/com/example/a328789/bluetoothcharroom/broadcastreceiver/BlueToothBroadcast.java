@@ -23,6 +23,7 @@ public class BlueToothBroadcast extends BroadcastReceiver {
     public BlueToothBroadcast(DeviceItemAdapter adapter) {
         this.adapter=adapter;
         list = new ArrayList<>();
+        adapter.setData(list);
     }
 
     @Override
@@ -35,7 +36,6 @@ public class BlueToothBroadcast extends BroadcastReceiver {
             Log.e("device:*****","正在搜索");
             if(bluetoothDevic!=null)
                 list.add(bluetoothDevic);
-            adapter.setData(list);
             adapter.notifyDataSetChanged();
         } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
 

@@ -15,10 +15,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.a328789.bluetoothcharroom.observable.StudentObserve;
+import com.example.a328789.bluetoothcharroom.observable.TeacherObservable;
 import com.example.a328789.bluetoothcharroom.utils.BlueToothUtils;
 import com.example.a328789.bluetoothcharroom.utils.MHandler;
 import com.example.a328789.bluetoothcharroom.view.DeviceItemAdapter;
 import com.example.a328789.bluetoothcharroom.view.MyRecyclerViewAdapter;
+import com.example.a328789.bluetoothcharroom.view.TopScrollListview;
 import com.example.a328789.bluetoothcharroom.view.mDecoration;
 
 import butterknife.BindView;
@@ -30,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.open_bluetooth)
     Button openBlueTooth;
     @BindView(R.id.recycler_list)
-    RecyclerView recyclerList;
+    TopScrollListview recyclerList;
 
     public MHandler mhandler=new MHandler(this);
     private BlueToothUtils blueToothUtils;
@@ -75,6 +78,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.add_friend://添加好友
                 searchBT();
+//                TeacherObservable teacherObservable = new TeacherObservable();
+//                teacherObservable.addObserver(new StudentObserve());
+//                teacherObservable.sendmessage("hello");
                 break;
             case R.id.open_bluetooth://打开蓝牙
                 blueToothUtils.openBT(this,mhandler);
@@ -127,6 +133,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onResume();
         if(myRecyclerViewAdapter!=null)
         refreshView();
+    }
+    public void showToas(){
+        Toast.makeText(MainActivity.this.getApplicationContext(),"hello",Toast.LENGTH_LONG).show();
     }
 
 
