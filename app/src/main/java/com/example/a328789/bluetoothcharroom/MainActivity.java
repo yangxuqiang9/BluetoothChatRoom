@@ -145,4 +145,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this,b.getName()+":"+b.getAddress(),Toast.LENGTH_SHORT).show();
         blueToothUtils.createBound(b);
     }
+    public void unuser(){
+
+    }
 }
